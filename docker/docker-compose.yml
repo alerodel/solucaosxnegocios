@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-alexandealmeida
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: sx123
+      MYSQL_DATABASE: SX_ENEM
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

@@ -1,0 +1,10 @@
+# Baseia-se na imagem oficial do MySQL
+FROM mysql:latest
+
+# Copia scripts SQL ou configurações adicionais para o container
+# Exemplo: Copiar um script inicial para configurar o banco
+COPY ./init.sql /docker-entrypoint-initdb.d/
+
+# Define variáveis de ambiente padrão (opcional, sobrescreve valores no docker-compose.yml)
+ENV MYSQL_ROOT_PASSWORD=sx123
+ENV MYSQL_DATABASE=SX_ENEM
